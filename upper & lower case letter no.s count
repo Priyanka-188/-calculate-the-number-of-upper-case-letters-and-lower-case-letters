@@ -1,0 +1,16 @@
+def stringCase(str):
+    #Creating a dictionary to store the count of letters.
+    dict1 = {"Lower case" :0 , "Upper case": 0}
+    for letter in str:
+        if letter.isupper():               #if lower case ,increment the value of key "Lower case" of dict1 dictionary
+            dict1["Upper case"]+=1
+        elif letter.islower():             #if upper case ,increment the value of key "Upper case" of dict1 dictionary
+            dict1["Lower case"]+=1
+        else:                              #else ignore (for eg. space ,tab,etc..)
+            pass
+        
+    print("Upper Case characters are : ",dict1["Upper case"])
+    print("Lower Case characters are : ",dict1["Lower case"])
+            
+str1 = input("Enter a string : ")
+stringCase(str1)
